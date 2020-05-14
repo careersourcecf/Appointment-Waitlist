@@ -98,6 +98,9 @@ body {
     border:1px solid #f26122;
     color:#f26122;
 }
+.virtual-only-notice {
+    display:none;
+}
 .location-switcher-active {
     background: #01a1dd!important;
     font-weight:bold;
@@ -114,7 +117,7 @@ body {
 .closed-msg {
     text-align:center;
     font-weight:bold;
-    color:#f26122;
+    color:#dd0101;
     font-size:1.2em;
 }
 .location-switcher-closed {

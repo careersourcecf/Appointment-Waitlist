@@ -1,0 +1,28 @@
+@media (max-width: 900px) {
+    body {
+        background: #fff;
+    }
+    .container {
+        max-width:100%;
+        width:100%;
+    }
+    .location-switcher {
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:0px;
+    }
+    .location-switcher li {
+        display: block;
+        margin-right: 0px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+    .virtual-only-notice {
+        display:block;
+        color:#dd0101;
+        margin:auto;
+        text-align:center;
+        font-weight:bold;
+        padding-top:20px;
+    }
+}

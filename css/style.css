@@ -2,11 +2,33 @@ body {
     background-color: #ffffff;
     background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_blur_splash.png) no-repeat center center fixed;
     font-family: Arial, Helvetica, sans-serif;
-    padding:20px;
+    padding:0px;
+    margin:0px;
 }
 .hide {
     display:none;
     opacity:0;
+}
+.go-home {
+    margin:0px;
+    padding:0px;
+    text-align:center;
+}
+.go-home a {
+    width: 100%;
+    display: block;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    background: #01a1dd;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+}
+.go-home a:hover {
+    background:#005ca8;
 }
 .container {
     width: 100%;

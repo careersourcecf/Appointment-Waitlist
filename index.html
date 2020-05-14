@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSCF Appointment Waitlist</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body onload="startTime()">
+
+    <div class="container">
+        <div class="welcome">
+            <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/cscf-logo.png" title="CareerSource Central Florida" class="welcome-logo">
+            <h1 class="welcome-title">Welcome to the Appointment Waitlist</h1>
+            <p>The current time is:</p>
+
+            <h1 class="welcome-time"><span id="date"></span><span class="date-comma"></span><sup><span id="date-ordinal"></span></sup> <span id="year"></span> <span id="time"></span> <span id="meridiem"></span> </h1>
+
+            <div id="open-status-container" class="open-status">We are currently <span id="open-status">OPEN</span>.</div>
+        </div>
+        <div class="location-switcher-container">
+            <h3>Please choose a CSCF Location:</h3>
+            <ul class="location-switcher">
+                <li>Seminole</li>
+                <li>Lake</li>
+                <li>Southeast</li>
+                <li class="location-switcher-disabled" title="This located is providing virtual services only and is not open for physical services.">Osceola</li>
+                <li class="location-switcher-disabled" title="This located is providing virtual services only and is not open for physical services.">West</li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

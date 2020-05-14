@@ -1,0 +1,86 @@
+body {
+    background-color: #ffffff;
+    background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_blur_splash.png) no-repeat center center fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:20px;
+}
+.container {
+    width: 100%;
+    max-width: 1100px;
+    background:#fff;
+    margin:auto;
+    margin-top:20px;
+}
+/*  WELCOME MESSAGE */
+.welcome {
+    text-align:center;
+}
+.welcome-logo {
+    width:200px;
+    display:block;
+    margin:auto;
+    max-width:100%;
+    padding-top:20px;
+}
+.welcome-time {
+    font-weight:bold;
+    color: #01a1dd;
+    font-size:1.8em;
+    display:block;
+    padding-top:20px;
+}
+.open-status {
+    padding:10px;
+    font-weight:bold;
+    color:black;
+    border-radius:25px;
+    display:inline-block;
+    margin:auto;
+    margin-bottom:20px;
+}
+.open {
+    background:#01a1dd;
+    color:white;
+}
+.closed {
+    background:#dd0101;
+    color:white;
+}
+/* LOCATION SWITCHER */
+.location-switcher-container h3 {
+    text-align:center;
+}
+.location-switcher {
+    list-style:none;
+    display:block;
+    margin:auto;
+    text-align:center;
+    padding-bottom:40px;
+    padding-top:20px;
+}
+.location-switcher li {
+    background:#f7f7f7;
+    color:#005ca8;
+    display:inline;
+    margin-right:20px;
+    padding:20px;
+    border:1px solid #f7f7f7;
+}
+
+.location-switcher li:hover {
+    cursor:pointer;
+    border:1px solid #f26122;
+    color:#f26122;
+}
+.location-switcher-active {
+    background: #01a1dd!important;
+    font-weight:bold;
+    color:white!important;
+    border:1px solid #01a1dd!important;
+}
+.location-switcher-disabled {
+    border:1px dashed #01a1dd!important;
+}
+.location-switcher-disabled:hover {
+    cursor:help!important;
+}

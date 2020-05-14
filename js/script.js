@@ -68,7 +68,7 @@ function startTime() {
     document.getElementById("meridiem").innerHTML = "PM";
   }
   //------------------
-  // Check if open
+  // Check if open -- BUSINESS HOURS GO HERE default 7 - 19
   if (h < 7 || h > 19) {
       openStatus = false;
   } else {

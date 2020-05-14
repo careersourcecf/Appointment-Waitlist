@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>CSCF Appointment Waitlist</title>
+    <link rel="icon" href="https://www.careersourcecentralflorida.com/wp-content/uploads/cropped-cscf-icon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://www.careersourcecentralflorida.com/wp-content/uploads/cropped-cscf-icon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://www.careersourcecentralflorida.com/wp-content/uploads/cropped-cscf-icon-180x180.png">
     <link href="css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body onload="startTime()">
@@ -16,9 +19,10 @@
 
             <h1 class="welcome-time"><span id="date"></span><span class="date-comma"></span><sup><span id="date-ordinal"></span></sup> <span id="year"></span> <span id="time"></span> <span id="meridiem"></span> </h1>
 
-            <div id="open-status-container" class="open-status">We are currently <span id="open-status">OPEN</span>.</div>
+            <div id="open-status-container" class="open-status">We are currently <span id="open-status">OPEN</span></div>
         </div>
-        <div class="location-switcher-container">
+        <div class="closed-msg hide" id="closed-msg">Please check back tomorrow to register for the waitlist.</div>
+        <div class="location-switcher-container" id="location-switcher">
             <h3>Please choose a CSCF Location:</h3>
             <ul class="location-switcher">
                 <li>Seminole</li>
@@ -27,6 +31,15 @@
                 <li class="location-switcher-disabled" title="This located is providing virtual services only and is not open for physical services.">Osceola</li>
                 <li class="location-switcher-disabled" title="This located is providing virtual services only and is not open for physical services.">West</li>
             </ul>
+        </div>
+        <div class="legal">
+            <div class="legal-logos">
+                <img id="careersource-florida" src="https://www.careersourcecentralflorida.com/wp-content/uploads/CareerSource-Florida-logo.png">
+                <img id="american-job-center" src="https://www.careersourcecentralflorida.com/wp-content/uploads/AmericanJobCenter-footer-logo.png">
+            </div>
+            <p>CareerSource Central Florida is an equal opportunity employer/program. Auxiliary aids and services are available upon request to individuals with disabilities. All voice telephone numbers on this document may be reached by persons using TTY/TDD equipment via 1-800-955-8771 - Voice: 1-800-955-8770.</p>
+            <p>CareerSource Central Florida is a proud partner of the American Job Center (AJC) Network. AJCs provide free help to job seekers for a variety of career and employment-related needs. Visit CareerOneStop.org/JobCenter for more information.</p>
+            <p>CareerSource Central Florida is the direct service provider for various workforce programs which are fully supported by the U.S. Department of Labor, Health and Human Services, and Agriculture as part of awards totaling $30.2 million. All statements, press releases, requests for proposals, bid solicitations, public statements, social media, toolkits, resource guides, website and visual presentations are fully funded with federal money.</p>
         </div>
 
     </div>

@@ -1,17 +1,23 @@
 // ==============================================
 // Display buinsess open satus 
 function buisnessHours(stat) {
-    if (stat) {
+    if (stat) { // BUSINESS IS OPEN
         document.getElementById('open-status').innerHTML = "OPEN";
         // change the appearance
         document.getElementById('open-status-container').classList.remove('closed');
         document.getElementById('open-status-container').classList.add('open');
+        // Hide the closed-msg and change appearance of switcher
+        document.getElementById('closed-msg').classList.add('hide');
+        document.getElementById('location-switcher').classList.remove('location-switcher-closed');
     }
-    else {
+    else { // BUSINESS IS CLOSED
         document.getElementById('open-status').innerHTML = "CLOSED";
         // change the appearance
         document.getElementById('open-status-container').classList.remove('open');
         document.getElementById('open-status-container').classList.add('closed');
+        // Show the closed-msg and change appearance of switcher
+        document.getElementById('closed-msg').classList.remove('hide');
+        document.getElementById('location-switcher').classList.add('location-switcher-closed');
     }
 }
 // ==============================================

@@ -114,6 +114,9 @@ body {
 .location-switcher li:hover {
 
 }
+.location-switcher li a:link {
+    color:inherit;
+}
 .location-switcher li a:visited {
     color:inherit;
 }

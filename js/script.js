@@ -71,7 +71,7 @@ function startTime() {
   }
   //------------------
   // Check if open -- BUSINESS HOURS GO HERE default 10 - 4
-  if (h < 10 || h > 16) {
+  if (h < 10 || h >= 16) {
       openStatus = false;
   } else {
       openStatus = true;

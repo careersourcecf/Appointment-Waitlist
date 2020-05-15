@@ -109,6 +109,10 @@ body {
     border:1px solid #f26122;
     color:#f26122;
 }
+.location-switcher li:active {
+    color:white;
+    background:#f26122;
+}
 .virtual-only-notice {
     display:none;
 }
@@ -123,6 +127,7 @@ body {
 }
 .location-switcher-disabled:hover {
     cursor:help!important;
+    border:1px dashed #f26122!important;
 }
 /* Closed Switcher */
 .closed-msg {

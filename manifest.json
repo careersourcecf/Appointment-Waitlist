@@ -4,17 +4,18 @@
   "description": "Create an appointment to visit CSCF Offices.",
   "icons": [
     {
-      "src": "/app/icons/icons_192.png",
+      "src": "/Appointment-Waitlist/app/icons/icons_192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/app/icons/icons_512.png",
+      "src": "/Appointment-Waitlist/app/icons/icons_512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
+  "scope":"/Appointment-Waitlist/",
   "background_color": "#01a1dd",
   "display": "fullscreen",
   "theme_color": "#01a1dd"

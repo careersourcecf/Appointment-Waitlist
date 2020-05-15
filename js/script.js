@@ -9,6 +9,7 @@ function buisnessHours(stat) {
         // Hide the closed-msg and change appearance of switcher
         document.getElementById('closed-msg').classList.add('hide');
         document.getElementById('location-switcher').classList.remove('location-switcher-closed');
+        document.getElementById('location-switcher').classList.remove('hide');
     }
     else { // BUSINESS IS CLOSED
         document.getElementById('open-status').innerHTML = "CLOSED";
@@ -18,6 +19,7 @@ function buisnessHours(stat) {
         // Show the closed-msg and change appearance of switcher
         document.getElementById('closed-msg').classList.remove('hide');
         document.getElementById('location-switcher').classList.add('location-switcher-closed');
+        document.getElementById('location-switcher').classList.add('hide');
     }
 }
 // ==============================================
@@ -68,11 +70,15 @@ function startTime() {
     document.getElementById("meridiem").innerHTML = "PM";
   }
   //------------------
-  // Check if open -- BUSINESS HOURS GO HERE default 7 - 19
-  if (h < 7 || h > 19) {
+  // Check if open -- BUSINESS HOURS GO HERE default 10 - 4
+  if (h < 10 || h > 16) {
       openStatus = false;
   } else {
       openStatus = true;
+  }
+  // Check if weekend
+  if (currentDayOfWeek == 'Saturday' || currentDayOfWeek == 'Sunday') {
+      openStatus = false;
   }
   // call the function
   buisnessHours(openStatus);

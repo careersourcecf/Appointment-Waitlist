@@ -121,7 +121,7 @@ body {
     color:inherit;
 }
 .location-switcher li a:active {
-    color:white;
+    color:white!important;
     background:#f26122;
 }
 .virtual-only-notice {

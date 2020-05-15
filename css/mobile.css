@@ -20,7 +20,7 @@
         padding-right:20px;
         padding-top:0px;
     }
-    .location-switcher li {
+    .location-switcher li a {
         display: block;
         margin-right: 0px;
         margin-top: 20px;

@@ -93,23 +93,31 @@ body {
     padding-top:20px;
 }
 .location-switcher li {
-    background:#f7f7f7;
     color:#005ca8;
     display:inline;
-    margin-right:20px;
-    padding:20px;
-    border:1px solid #f7f7f7;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10+ and Edge */
     user-select: none; /* Standard syntax */
 }
-
-.location-switcher li:hover {
+.location-switcher li a {
+    margin-right:20px;
+    padding:20px;
+    border:1px solid #f7f7f7;
+    background:#f7f7f7;
+    text-decoration:none;
+}
+.location-switcher li a:hover {
     cursor:pointer;
     border:1px solid #f26122;
-    color:#f26122;
+    color:#f26122!important;
 }
-.location-switcher li:active {
+.location-switcher li:hover {
+
+}
+.location-switcher li a:visited {
+    color:inherit;
+}
+.location-switcher li a:active {
     color:white;
     background:#f26122;
 }

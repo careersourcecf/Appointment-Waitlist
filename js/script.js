@@ -1,3 +1,12 @@
+// (c) 2020 CareerSource Central Florida
+// Author: Anthony Gaglio
+// ==============================================
+// APPOINTMENT FRONT END PORTAL
+// ==============================================
+// Update Business Hours Here
+businessHourOpen = 10;
+businessHourClosed = 16;
+
 // ==============================================
 // Display buinsess open satus 
 function buisnessHours(stat) {
@@ -12,7 +21,48 @@ function buisnessHours(stat) {
         document.getElementById('location-switcher').classList.remove('hide');
     }
     else { // BUSINESS IS CLOSED
+        // get the current time 
+        closeToday = new Date();
+        closeHour = closeToday.getHours();
+        closeMin  = closeToday.getMinutes();
+
+        // Display Closed
         document.getElementById('open-status').innerHTML = "CLOSED";
+        // -----------------------------------------------
+        // Check back message
+        if (currentDayOfWeek == "Friday" || currentDayOfWeek == "Saturday" || currentDayOfWeek == "Sunday") {
+            if (currentDayOfWeek == "Friday" && closeHour < businessHourOpen ) {
+                // If its friday morning before open
+                minUntilOpen = 60 - closeMin; // calc the minutes until open
+                // display minutes or minute
+                plural = '';
+                if (minUntilOpen != 1) {
+                    plural = "s";
+                }
+                document.getElementById("next-business-day").innerHTML = "in " + minUntilOpen + " minute" + plural;
+            }
+            else { 
+                // If its after hours friday or sat-sun
+                document.getElementById("next-business-day").innerHTML = "on Monday";
+            }
+        } else { // if its Monday-thurs
+            if (closeHour < businessHourOpen) { // before open hour
+                if (closeHour == (businessHourOpen - 1)) { // one hour before business open
+                    minUntilOpen = 60 - closeMin;
+                    plural = '';
+                    if (minUntilOpen != 1) {
+                        plural = "s";
+                    }
+                    document.getElementById("next-business-day").innerHTML = "in " + minUntilOpen + " minute" + plural;
+                } else { // early morning > 1 hour before open
+                    document.getElementById("next-business-day").innerHTML = "soon";
+                }
+            }
+            if (closeHour >= businessHourClosed) { // after closed hour
+                document.getElementById("next-business-day").innerHTML = "tomorrow";
+            }
+        }
+        // -----------------------------------------------
         // change the appearance
         document.getElementById('open-status-container').classList.remove('open');
         document.getElementById('open-status-container').classList.add('closed');
@@ -71,7 +121,7 @@ function startTime() {
   }
   //------------------
   // Check if open -- BUSINESS HOURS GO HERE default 10 - 4
-  if (h < 10 || h >= 16) {
+  if (h < businessHourOpen || h >= businessHourClosed) {
       openStatus = false;
   } else {
       openStatus = true;

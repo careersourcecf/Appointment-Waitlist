@@ -52,20 +52,24 @@
     <div class="container animate__animated animate__fadeIn  animate__delay-1s">
         <div class="welcome animate__animated animate__fadeIn animate__delay-2s">
             <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/cscf-logo.png" title="CareerSource Central Florida" class="welcome-logo">
-            <h1 class="welcome-title">In-Person Appointment Waitlist</h1>
+            <h1 class="welcome-title">Appointment Request</h1>
+            <p class="welcome-description">CareerSource Central Florida (CSCF) is excited to reopen its doors to businesses and customers beginning June 3 at our Seminole County, Southeast Orange County and Lake County Career Centers for limited appointment services only.<br><br>
+            We are seeing Career Seekers between 10 a.m. – Noon and 1 p.m. – 4 p.m. Monday through Friday for either self-service unemployment activities or to help you advance your skills or connect you to a career.</p>
             <p>The current time is:</p>
 
             <h1 class="welcome-time"><span id="date"></span><span class="date-comma"></span><span id="date-ordinal"></span> <span id="year" class="hide"></span> <span id="time"></span> <span id="meridiem"></span> </h1>
 
-            <div id="open-status-container" class="open-status">We are currently <span id="open-status">OPEN</span></div>
+            <div id="open-status-container" class="open-status">CSCF Offices are currently <span id="open-status">OPEN</span></div>
+
+            <div id="holiday-status-container" class="open-status holiday-status hide"><span id="holiday-status">Celebrating <span id="holiday-id"></span> holiday &#127881;</span></div>
         </div>
-        <div class="closed-msg hide animate__animated animate__fadeIn animate__delay-2s" id="closed-msg">Please check back <span id="next-business-day"></span> to register for the waitlist.<br>Appointment hours are between 10:00 AM and 4:00 PM on weekdays.</div>
+        <div class="closed-msg hide animate__animated animate__fadeIn animate__delay-3s" id="closed-msg">You can still request an appointment. <br>Centers will open again <span id="next-business-day"></span>.</div>        
         <div class="location-switcher-container hide animate__animated animate__fadeIn animate__delay-3s" id="location-switcher">
-            <h3>Please choose a CSCF Location:</h3>
+            <h3>Select an Appointment Location:</h3>
             <ul class="location-switcher">
-                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_seminole" title="Tap to create an appointment" alt="CSCF Southeast Office">Seminole</a></li>
-                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_lake" title="Tap to create an appointment" alt="CSCF Southeast Office">Lake</a></li>
-                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_southeast" title="Tap to create an appointment" alt="CSCF Southeast Office">Southeast</a></li>
+                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_seminole" title="Tap to create an appointment" alt="CSCF Southeast Office">Seminole County</a></li>
+                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_lake" title="Tap to create an appointment" alt="CSCF Southeast Office">Lake County</a></li>
+                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_southeast" title="Tap to create an appointment" alt="CSCF Southeast Office">Southeast Orange County</a></li>
                 <!-- VIRTUAL APPOINTMENTS NOT HOUSED HERE ANYMORE -->
                 <!-- <span class="virtual-only-notice">These centers are delivering services virtually:</span> -->
                 <!-- <li><a  class="location-switcher-disabled" href="https://cscfit.formstack.com/forms/cscf_enter_building" title="This located is providing virtual services only and is not open for physical services. Tap to create an appointment" alt="CSCF Southeast Office">Osceola</a></li>
@@ -73,6 +77,7 @@
                 <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
             </ul>
         </div>
+
         <div class="legal">
             <div class="legal-logos">
                 <img id="careersource-florida" src="https://www.careersourcecentralflorida.com/wp-content/uploads/CareerSource-Florida-logo.png">

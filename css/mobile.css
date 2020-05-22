@@ -9,6 +9,9 @@
         width:100%;
         margin-top:0px;
     }
+    .welcome-description {
+        max-width:100%;
+    }
     .welcome-time {
         font-weight:bold;
         color: #01a1dd;
@@ -25,6 +28,9 @@
         margin-right: 0px;
         margin-top: 20px;
         padding: 20px;
+    }
+    .closed-msg {
+        max-width:100%;
     }
     .virtual-only-notice {
         display:block;

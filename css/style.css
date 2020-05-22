@@ -5,10 +5,7 @@ body {
     padding:0px;
     margin:0px;
 }
-.hide {
-    display:none;
-    opacity:0;
-}
+
 /* CSCFL Banner */
 .go-home {
     margin:0px;
@@ -51,6 +48,12 @@ body {
     max-width:100%;
     padding-top:20px;
 }
+.welcome-description {
+    max-width:400px;
+    padding:10px;
+    margin:auto;
+    display:block;
+}
 .welcome-time {
     font-weight:bold;
     color: #01a1dd;
@@ -72,12 +75,16 @@ body {
     -ms-user-select: none; /* IE 10+ and Edge */
     user-select: none; /* Standard syntax */
 }
+.holiday-status {
+    display:block;
+}
 .open {
     background:#01a1dd;
     color:white;
 }
 .closed {
-    background:#dd0101;
+    background:#f26122
+;
     color:white;
 }
 /* LOCATION SWITCHER */
@@ -144,7 +151,9 @@ body {
 .closed-msg {
     text-align:center;
     font-weight:bold;
-    color:#dd0101;
+    max-width:400px;
+    color:#f26122;
+    margin:auto;
     font-size:1.2em;
     padding-bottom:30px;
 }
@@ -171,4 +180,8 @@ body {
     padding-right:20px;
     width:150px;
     max-width:100%;
+}
+.hide {
+    display:none;
+    opacity:0;
 }

@@ -7,6 +7,19 @@
 businessHourOpen = 10;
 businessHourClosed = 16;
 
+// Holidays
+holidayList = [
+    ['May 25','Memorial Day'],
+    ['July 4','Independence Day'],
+    ['September 7','Labor Day'],
+    ['November 11','Veterans Day'],
+    ['November 26','Thanksgiving Day'],
+    ['November 27','Day After Thanksgiving Day'],
+    ['December 24','Holiday Eve'],
+    ['December 25','Holiday 2020'],
+    ['January 1','New Years Day'],
+]
+
 // ==============================================
 // Display buinsess open satus 
 function buisnessHours(stat) {
@@ -17,7 +30,6 @@ function buisnessHours(stat) {
         document.getElementById('open-status-container').classList.add('open');
         // Hide the closed-msg and change appearance of switcher
         document.getElementById('closed-msg').classList.add('hide');
-        document.getElementById('location-switcher').classList.remove('location-switcher-closed');
         document.getElementById('location-switcher').classList.remove('hide');
     }
     else { // BUSINESS IS CLOSED
@@ -32,6 +44,7 @@ function buisnessHours(stat) {
         // Check back message
         if (currentDayOfWeek == "Friday" || currentDayOfWeek == "Saturday" || currentDayOfWeek == "Sunday") {
             if (currentDayOfWeek == "Friday" && closeHour < businessHourOpen ) {
+                if (holidayChecker() === false) {
                 // If its friday morning before open
                 minUntilOpen = 60 - closeMin; // calc the minutes until open
                 // display minutes or minute
@@ -40,20 +53,29 @@ function buisnessHours(stat) {
                     plural = "s";
                 }
                 document.getElementById("next-business-day").innerHTML = "in " + minUntilOpen + " minute" + plural;
+                } else {
+                    // its a holiday
+                    document.getElementById("next-business-day").innerHTML = "on the next business day";
+                }
             }
             else { 
                 // If its after hours friday or sat-sun
-                document.getElementById("next-business-day").innerHTML = "on Monday";
+                document.getElementById("next-business-day").innerHTML = "on the next business day";
             }
         } else { // if its Monday-thurs
             if (closeHour < businessHourOpen) { // before open hour
                 if (closeHour == (businessHourOpen - 1)) { // one hour before business open
-                    minUntilOpen = 60 - closeMin;
-                    plural = '';
-                    if (minUntilOpen != 1) {
-                        plural = "s";
+                    if (holidayChecker() === false) {
+                        minUntilOpen = 60 - closeMin;
+                        plural = '';
+                        if (minUntilOpen != 1) {
+                            plural = "s";
+                        }
+                        document.getElementById("next-business-day").innerHTML = "in " + minUntilOpen + " minute" + plural;
+                    } else {
+                        // its a holiday
+                        document.getElementById("next-business-day").innerHTML = "on the next business day";
                     }
-                    document.getElementById("next-business-day").innerHTML = "in " + minUntilOpen + " minute" + plural;
                 } else { // early morning > 1 hour before open
                     document.getElementById("next-business-day").innerHTML = "soon";
                 }
@@ -62,16 +84,41 @@ function buisnessHours(stat) {
                 document.getElementById("next-business-day").innerHTML = "tomorrow";
             }
         }
+        // check if holiday
+        
         // -----------------------------------------------
         // change the appearance
         document.getElementById('open-status-container').classList.remove('open');
         document.getElementById('open-status-container').classList.add('closed');
         // Show the closed-msg and change appearance of switcher
         document.getElementById('closed-msg').classList.remove('hide');
-        document.getElementById('location-switcher').classList.add('location-switcher-closed');
-        document.getElementById('location-switcher').classList.add('hide');
+        //document.getElementById('location-switcher').classList.add('location-switcher-closed');
+
+        document.getElementById('location-switcher').classList.remove('hide');
     }
 }
+// ==============================================
+// Holiday Checker
+function holidayCheck() {
+    // Check if holiday
+  dateCheck = currentMonth + ' ' + currentDayOfMonth;
+  currentHoliday = '';
+  // loop through the list of holidays
+  for (var i=0; i < holidayList.length;i++){
+      // check if a holiday is found
+      if (dateCheck === holidayList[i][0]) {
+          dateCheck = true;
+
+          // get the holiday title
+          currentHoliday = holidayList[i][1];
+          break;
+      } else { // holiday not found
+        dateCheck = false;
+      }
+  }
+  return dateCheck;
+}
+
 // ==============================================
 // Display todays date
 let openStatus = true;
@@ -120,16 +167,32 @@ function startTime() {
     document.getElementById("meridiem").innerHTML = "PM";
   }
   //------------------
-  // Check if open -- BUSINESS HOURS GO HERE default 10 - 4
+  // Check if open --
   if (h < businessHourOpen || h >= businessHourClosed) {
       openStatus = false;
   } else {
-      openStatus = true;
+      openStatus = true; // Default value for openStatus
   }
   // Check if weekend
   if (currentDayOfWeek == 'Saturday' || currentDayOfWeek == 'Sunday') {
       openStatus = false;
   }
+  // ---------------------------------------
+  // Check if holiday
+  dateCheck = holidayCheck();
+
+  // check if holiday was found
+  if (dateCheck === true) {
+    console.log(currentHoliday + " Holiday was found");
+    // show the holiday message
+    document.getElementById('holiday-status-container').classList.remove('hide');
+    document.getElementById('holiday-id').innerHTML = currentHoliday;
+    // not open
+    openStatus = false;
+  }
+  // END HOLIDAY CHECK 
+  // ---------------------------------------
+
   // call the function
   buisnessHours(openStatus);
   //------------------

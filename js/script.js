@@ -44,7 +44,7 @@ function buisnessHours(stat) {
         // Check back message
         if (currentDayOfWeek == "Friday" || currentDayOfWeek == "Saturday" || currentDayOfWeek == "Sunday") {
             if (currentDayOfWeek == "Friday" && closeHour < businessHourOpen ) {
-                if (holidayChecker() === false) {
+                if (holidayCheck() === false) {
                 // If its friday morning before open
                 minUntilOpen = 60 - closeMin; // calc the minutes until open
                 // display minutes or minute
@@ -65,7 +65,7 @@ function buisnessHours(stat) {
         } else { // if its Monday-thurs
             if (closeHour < businessHourOpen) { // before open hour
                 if (closeHour == (businessHourOpen - 1)) { // one hour before business open
-                    if (holidayChecker() === false) {
+                    if (holidayCheck() === false) {
                         minUntilOpen = 60 - closeMin;
                         plural = '';
                         if (minUntilOpen != 1) {

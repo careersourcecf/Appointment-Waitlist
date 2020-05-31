@@ -185,3 +185,8 @@ body {
     display:none;
     opacity:0;
 }
+
+/* HIDE ALL UNTIL JUNE 3 */
+.REMOVE_JUNETHIRD {
+    display:none!important;
+}

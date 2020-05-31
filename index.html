@@ -41,7 +41,7 @@
     <!-- Chrome PWA -->
     <meta name="mobile-web-app-capable" content="yes">
     <!-- -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/style_new.css" rel="stylesheet" type="text/css" />
     <link href="css/mobile.css" rel="stylesheet" type="text/css" />
     <link href="https://www.careersourcecentralflorida.com/modules/animate/animate.min.css" rel="stylesheet" type="text/css" />
   </head>
@@ -50,28 +50,32 @@
         <a id="leave-chat" href="https://careersourcecentralflorida.com" alt="Return to CSCF" title="Click here to return to CareerSourceCentralFlorida.com">← Go back to CareerSourceCentralFlorida.com</a>
     </section>
     <div class="container animate__animated animate__fadeIn  animate__delay-1s">
-        <div class="welcome animate__animated animate__fadeIn animate__delay-2s">
+        <div class="welcome animate__animated animate__fadeIn animate__delay-2s" style="max-width:90%;margin:auto;">
             <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/cscf-logo.png" title="CareerSource Central Florida" class="welcome-logo">
             <h1 class="welcome-title">Appointment Request</h1>
-            <p class="welcome-description">CareerSource Central Florida (CSCF) is excited to reopen its doors to businesses and customers beginning June 3 at our Seminole County, Southeast Orange County and Lake County Career Centers for limited appointment services only.<br><br>
-            We are seeing Career Seekers between 10 a.m. – Noon and 1 p.m. – 4 p.m. Monday through Friday for either self-service unemployment activities or to help you advance your skills or connect you to a career.</p>
+            <p class="welcome-description">CareerSource Central Florida (CSCF) is excited to reopen its doors for in-person services to customers beginning June 3 at our Seminole County, Southeast Orange County and Lake County Career Centers for limited appointment services only.</p>
+
+<p>Appointments are being scheduled between 10 a.m. - 4 p.m.  Monday through Friday for either self-service unemployment activities or to help you advance your skills or connect you to a career. Virtual appointments and services continue to be scheduled and provided.</p>
             <p>The current time is:</p>
 
             <h1 class="welcome-time"><span id="date"></span><span class="date-comma"></span><span id="date-ordinal"></span> <span id="year" class="hide"></span> <span id="time"></span> <span id="meridiem"></span> </h1>
 
-            <div id="open-status-container" class="open-status">CSCF Offices are currently <span id="open-status">OPEN</span></div>
+            <div id="open-status-container" class="open-status REMOVE_JUNETHIRD">CSCF Offices are currently <span id="open-status">OPEN</span></div>
 
             <div id="holiday-status-container" class="open-status holiday-status hide"><span id="holiday-status">Celebrating <span id="holiday-id"></span> holiday &#127881;</span></div>
         </div>
-        <div class="closed-msg hide animate__animated animate__fadeIn animate__delay-3s" id="closed-msg"> Centers will open again <span id="next-business-day"></span>.
+
+        <h3 class="animate__animated animate__fadeIn animate__delay-2s" style="text-align:center;">Appointments begin June 3rd.</h3>
+
+        <div class="closed-msg hide animate__animated animate__fadeIn animate__delay-3s REMOVE_JUNETHIRD" id="closed-msg"> Centers will open again <span id="next-business-day"></span>.
         <br>
-        You can still request an appointment:
+        <span id="request-appointment-message">You can still request an appointment:</span>
         </div>        
-        <div class="location-switcher-container hide animate__animated animate__fadeIn animate__delay-3s" id="location-switcher">
+        <div class="location-switcher-container hide animate__animated animate__fadeIn animate__delay-3s " id="location-switcher">
             <h3>Select an Appointment Location:</h3>
             <ul class="location-switcher">
-                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_seminole_1" title="Tap to create an appointment" alt="CSCF Southeast Office">Seminole County</a></li>
-                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_lake_1" title="Tap to create an appointment" alt="CSCF Southeast Office">Lake County</a></li>
+                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_seminole_2" title="Tap to create an appointment" alt="CSCF Southeast Office">Seminole County</a></li>
+                <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_lake_2" title="Tap to create an appointment" alt="CSCF Southeast Office">Lake County</a></li>
                 <li><a href="https://cscfit.formstack.com/forms/cscf_enter_building_southeast" title="Tap to create an appointment" alt="CSCF Southeast Office">Southeast Orange County</a></li>
                 <!-- VIRTUAL APPOINTMENTS NOT HOUSED HERE ANYMORE -->
                 <!-- <span class="virtual-only-notice">These centers are delivering services virtually:</span> -->

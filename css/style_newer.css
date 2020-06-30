@@ -1,7 +1,35 @@
+@font-face {
+    font-family: 'ProximaBlack';
+    src: url('https://www.careersourcecentralflorida.com/wp-content/themes/auxilia/lib/fonts/ProximaNova/ProximaNova-Black.otf');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaExtraBold';
+    src: url('https://www.careersourcecentralflorida.com/wp-content/themes/auxilia/lib/fonts/ProximaNova/ProximaNova-Extrabold.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaBold';
+    src: url('https://www.careersourcecentralflorida.com/wp-content/themes/auxilia/lib/fonts/ProximaNova/ProximaNova-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ProximaRegular';
+    src: url('https://www.careersourcecentralflorida.com/wp-content/themes/auxilia/lib/fonts/ProximaNova/ProximaNova-Regular.otf');
+    font-weight: 800;
+    font-style: normal;
+}
+
 body {
     background-color: #ffffff;
     background: url(https://www.careersourcecentralflorida.com/wp-content/uploads/cscf_blur_splash.png) no-repeat center center fixed;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ProximaRegular', Helvetica, Arial, sans-serif;
     padding:0px;
     margin:0px;
 }
@@ -40,6 +68,9 @@ body {
 /*  WELCOME MESSAGE */
 .welcome {
     text-align:center;
+}
+.bold {
+    font-family:"ProximaBold", Helvetica, Arial, sans-serif;
 }
 .welcome-logo {
     width:200px;
@@ -100,7 +131,7 @@ body {
     padding-top:20px;
 }
 .location-switcher li {
-    color:#005ca8;
+    color:white;
     display:inline;
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10+ and Edge */
@@ -109,14 +140,12 @@ body {
 .location-switcher li a {
     margin-right:20px;
     padding:20px;
-    border:1px solid #f7f7f7;
-    background:#f7f7f7;
-    text-decoration:none;
+    text-decoration:none; 
 }
 .location-switcher li a:hover {
     cursor:pointer;
-    border:1px solid #f26122;
-    color:#f26122!important;
+    /* border:1px solid #f26122;
+    color:#f26122!important; */
 }
 .location-switcher li:hover {
 
@@ -128,8 +157,8 @@ body {
     color:inherit;
 }
 .location-switcher li a:active {
-    color:white!important;
-    background:#f26122;
+    /* color:white!important;
+    background:#f26122; */
 }
 .virtual-only-notice {
     display:none;
@@ -147,6 +176,39 @@ body {
     cursor:help!important;
     border:1px dashed #f26122!important;
 }
+
+/* New Buttons */
+.button3 {
+    background-color: #faa634;
+    border: 1px solid #faa634;
+    transition: all 0.5s;
+    padding: 10px 25px;
+    font-family: 'ProximaBlack', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.button3:hover {
+    background-color: #fff;
+    color: #faa634!important;
+    text-decoration: none;
+}
+.virtual-appt {
+    background-color: #3eb049;
+    border: 1px solid #3eb049;
+    transition: all 0.5s;
+    padding: 10px 25px;
+    font-family: 'ProximaBlack', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.virtual-appt:hover {
+    background-color: #fff;
+    color: #3eb049!important;
+    text-decoration: none;
+}
+
 /* Closed Switcher */
 .closed-msg {
     text-align:center;
@@ -189,4 +251,12 @@ body {
 /* HIDE ALL UNTIL JUNE 3 */
 .REMOVE_JUNETHIRD {
     display:none!important;
+}
+
+/* minimum width */
+@media (min-width: 900px) {
+    .button3 {
+        white-space: nowrap;
+        line-height: 90px;
+    }
 }

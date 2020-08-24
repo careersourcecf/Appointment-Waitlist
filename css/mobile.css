@@ -22,6 +22,8 @@
         padding-left:20px;
         padding-right:20px;
         padding-top:0px;
+        max-width: 100%;
+        width: 80%;
     }
     .location-switcher li a {
         display: block;
@@ -45,5 +47,31 @@
     }
     .legal-logos img {
         display:block;
+    }
+    .locations-list li {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .location-list-item {
+        padding-bottom: 50px;
+    }
+    .locations-list .button3 {
+        margin-left: 0;
+    }
+    .center-address {
+        border-bottom: 0px;
+        text-align: left;
+    }
+    .locations-list li {
+        padding-bottom: 50px;
+        border-bottom: 4px solid #dbf5ff;
+        max-width: 90%;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+    .locations-list .button3 {
+        height: auto;
     }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>CSCF Appointment Request</title>
+    <title>CSCF Appointment Request - QLESS</title>
     <link rel="icon" href="https://www.careersourcecentralflorida.com/wp-content/uploads/cropped-cscf-icon-32x32.png" sizes="32x32">
     <link rel="icon" href="/Appointment-Waitlist/app/icons/icons_192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="https://www.careersourcecentralflorida.com/wp-content/uploads/internal/appointments/app/icons/icons_192.png">
@@ -45,46 +45,157 @@
     <link href="css/mobile.css" rel="stylesheet" type="text/css" />
     <link href="https://www.careersourcecentralflorida.com/modules/animate/animate.min.css" rel="stylesheet" type="text/css" />
   </head>
-  <body onload="startTime()">
-    <section id="back-to-cscf" class="go-home animate__animated animate__fadeIn animate__delay-1s">
+  <body>
+    <section id="back-to-cscf" class="go-home animate__animated animate__fadeIn ">
         <a id="leave-chat" href="https://careersourcecentralflorida.com" alt="Return to CSCF" title="Click here to return to CareerSourceCentralFlorida.com">← Go back to CareerSourceCentralFlorida.com</a>
     </section>
-    <div class="container animate__animated animate__fadeIn  animate__delay-1s">
-        <div class="welcome animate__animated animate__fadeIn animate__delay-2s" style="max-width:90%;margin:auto;">
-            <img src="https://www.careersourcecentralflorida.com/wp-content/uploads/cscf-logo.png" title="CareerSource Central Florida" class="welcome-logo">
-            <h1 class="welcome-title">Appointment Request</h1>
-            <p class="welcome-description">CareerSource Central Florida (CSCF) is excited to reopen its doors for in-person services to customers for limited appointment services only.</p>
-
-<p>Appointments are being scheduled between 10 a.m. - 4 p.m.  Monday through Friday for either self-service unemployment activities or to help you advance your skills or connect you to a career. <strong><span class="bold" style="font-weight:bold;">Virtual appointments and services continue to be scheduled and provided.</span></strong></p>
-            <p>The current time is:</p>
-
-            <h1 class="welcome-time"><span id="date"></span><span class="date-comma"></span><span id="date-ordinal"></span> <span id="year" class="hide"></span> <span id="time"></span> <span id="meridiem"></span> </h1>
-
-            <div id="open-status-container" class="open-status REMOVE_JUNETHIRD">CSCF Offices are currently <span id="open-status">OPEN</span></div>
-
-            <div id="holiday-status-container" class="open-status holiday-status hide"><span id="holiday-status">Celebrating <span id="holiday-id"></span> holiday &#127881;</span></div>
+    <div class="container animate__animated animate__fadeIn">
+        <div class="header">
+            <div class="nav-logo">
+                <img src="https://i.imgur.com/lDfOCvz.png" title="CareerSource Central Florida and QLess Appointment Platform" class="welcome-logo">
+            </div>
+            <h1 class="welcome-title">Book an Appointment</h1>
+            <a href="#" id="backBtn" class="backBtn hide">Go Back</a>
         </div>
-
-        <h3 class="animate__animated animate__fadeIn animate__delay-2s" style="text-align:center;">Virtual appointments continue and in-person appointments begin June <sup>3rd</sup>.</h3>
-
-        <div class="closed-msg hide animate__animated animate__fadeIn animate__delay-3s REMOVE_JUNETHIRD" id="closed-msg"> Centers will open again <span id="next-business-day"></span>.
-        <br>
-        <span id="request-appointment-message">You can still request an appointment:</span>
-        </div>        
-        <div class="location-switcher-container hide animate__animated animate__fadeIn animate__delay-3s " id="location-switcher">
-            <h3>Select a Virtual Appointment or In-Person Location:</h3>
-            <ul class="location-switcher">
-                <li><a class="virtual-appt" href="https://cscfit.formstack.com/forms/cscf_virtual_appointment" title="Tap to create a virtual appointment" alt="Virtual Appointment">Virtual Appointment</a></li>
-            </ul>
-            <ul class="location-switcher">
-                <li><a class="button3" href="https://cscfit.formstack.com/forms/cscf_enter_building_seminole_2" title="Tap to create an appointment" alt="CSCF Southeast Office">Seminole County</a></li>
-                <li><a class="button3" href="https://cscfit.formstack.com/forms/cscf_enter_building_lake_2" title="Tap to create an appointment" alt="CSCF Southeast Office">Lake County</a></li>
-                <li><a class="button3" href="https://cscfit.formstack.com/forms/cscf_enter_building_southeast" title="Tap to create an appointment" alt="CSCF Southeast Office">Southeast Orange County</a></li>
-                <li><a class="button3" href="https://cscfit.formstack.com/forms/cscf_enter_building_osceola" title="Tap to create an appointment" alt="CSCF Southeast Office">Osceola County</a></li>
-            </ul>
-            
+<!-- ------------------------------------------------------------ -->
+        <!-- VIEWS -->
+        <div class="view view-landing animate__animated animate__fadeIn animate__delay-1s">
+            <div class="welcome" style="max-width:90%;margin:auto;">
+                <div class="description-container">
+                    <h2 class="welcome-description">We’re excited to meet you and help with your career goals! How can we help you?</h2>
+                    <p class="appointment-type-description">Virtually meet with a Career Consultant to help with anything from career planning to professional development and training opportunities.</p>  
+                    <ul class="location-switcher">
+                    <li><a id="landing-virtual-appt" class="virtual-appt" href="#" title="Tap to create a virtual appointment" alt="Virtual Appointment">Virtual Appointment</a></li>
+                </ul>
+                    <p class="appointment-type-description">Visit one of our locations to use our computers for your employment or unemployment needs like filing claims with the Department of Economic Opportunity.</p>
+                    <ul class="location-switcher">
+                    <li><a id="landing-in-person-appt" class="button3" href="#" title="On-site Services – Computer Use" alt="On-site Services – Computer Use">In-Person Appointment – Computer Use</a></li>
+                </div>
+            </div>
         </div>
-
+<!-- ------------------------------------------------------------ -->
+<!-- view-virtual-appt -->
+        <div class="view view-virtual-appt hide animate__animated animate__fadeIn animate__delay-1s">
+            <div class="location-switcher-container" id="location-switcher">
+                <h3>Get hands-on support for one of the following:</h3>
+                <div class="view-list">
+                    <ul>
+                        <li>Start Your Career Journey by Registering with Us </li>
+                        <li>Develop or Revamp Resume</li>
+                        <li>Career Planning</li>
+                        <li>Job Search</li>
+                        <li>Strengthen Interview Skills</li>
+                        <li>Upskilling & Training Opportunities</li>
+                    </ul>
+                </div>
+                <!-- <h3>Schedule a Virtual Appointment:</h3> -->
+                <ul class="location-switcher">
+                    <li><a target="_blank" class="virtual-appt" href="https://cscfit.formstack.com/forms/cscf_virtual_appointment" title="Tap to create a virtual appointment" alt="Virtual Appointment">Schedule a Virtual Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- ------------------------------------------------------------ -->
+<!-- view-in-person-appt-1 -->
+        <div class="view view-in-person-appt hide animate__animated animate__fadeIn animate__delay-1s">
+            <div class="location-switcher-container" id="location-switcher">
+                <h3>Below are the options available for an on-site visit at one of our Career Centers:</h3>
+                <div class="view-list">
+                    <ul>
+                        <li>Fill Out Initial Department of Economic Opportunity (DEO) Re-employment Claim</li>
+                        <li>Submit Weekly Report to DEO (Re-employment Claim)</li>
+                    </ul>
+                </div>
+                <h3>For your safety, we require you to wear a mask and we will be conducting temperature checks for in-person appointments.</h3>
+                <ul class="location-switcher">
+                    <li><a id="view-in-person-2" class="button3" href="#" title="Tap to create an appointment" alt="CSCF Seminole Office">Schedule In-Person Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+<!-- ------------------------------------------------------------ -->
+<!-- view-in-person-appt-2 -->
+        <div class="view view-in-person-appt-2 hide animate__animated animate__fadeIn animate__delay-1s">
+            <div class="location-switcher-container" id="location-switcher">
+                <h3>Which one of our locations is most convenient for you?</h3>
+                <div class="locations-list">
+                    <ul>
+                        <li>
+                            <div class="location-list-item">
+                                <h4>Lake County</h4>
+                                <p class="center-address">
+                                    Lake-Sumter State College<br>
+                                    9909 U.S. Hwy 441, Building M#29<br>
+                                    Leesburg, FL 34788
+                                </p>
+                            </div>
+                            <a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/297" title="Tap to create an appointment" alt="CSCF Lake Office">Book Appointment</a>
+                        </li>
+                        <li>
+                            <div class="location-list-item">
+                                    <h4>Osceola County</h4>
+                                    <p class="center-address">
+                                        Valencia College Osceola Campus <br>
+                                        1800 Denn John Lane, CIT Building, Suite 300 <br>
+                                        Kissimmee, FL 34744 (Parking Available in Lot J) 
+                                    </p>
+                            </div>
+                            <a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/295 " title="Tap to create an appointment" alt="CSCF Southeast Office">Book Appointment</a>
+                        </li>
+                        <li>
+                            <div class="location-list-item">
+                                <h4>Seminole County</h4>
+                                <p class="center-address">
+                                    Lake-Sumter State College - Clark Maxwell Library <br>
+                                    1405 County Road 526A<br>
+                                    Sumterville, FL 33585  
+                                </p>
+                            </div>
+                            <a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/296" title="Tap to create an appointment" alt="CSCF Seminole Office">Book Appointment</a>
+                        </li>
+                        <li>
+                            <div class="location-list-item">
+                                <h4>Southeast Orange County</h4>
+                                <p class="center-address">
+                                    5784 S. Semoran Boulevard<br>
+                                    Orlando, FL 32822
+                                </p>
+                            </div>
+                            <a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/277" title="Tap to create an appointment" alt="CSCF Southeast Office">Book Appointment</a>
+                        </li>
+                        <!-- <li>
+                            <div class="location-list-item">
+                                <h4>Sumter County</h4>
+                                <p class="center-address">
+                                    Lake-Sumter State College - Clark Maxwell Library<br>
+                                    1405 County Road 526A<br>
+                                    Sumterville, FL 33585
+                                </p>
+                            </div>
+                        </li> -->
+                        <li>
+                            <div class="location-list-item">
+                                <h4>West Orange County</h4>
+                                <p class="center-address">
+                                    West Oaks Mall<br>
+                                    9401 West Colonial Drive, Suite 403<br>
+                                    Ocoee, Florida 34761  
+                                </p>
+                            </div>
+                            <a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/298" title="Tap to create an appointment" alt="CSCF West Office">Book Appointment</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <h3>Schedule an In-Person Location:</h3>
+                <ul class="location-switcher">
+                    <li><a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/296" title="Tap to create an appointment" alt="CSCF Seminole Office">Seminole County</a></li>
+                    <li><a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/297" title="Tap to create an appointment" alt="CSCF Lake Office">Lake County</a></li>
+                    <li><a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/298" title="Tap to create an appointment" alt="CSCF West Office">West County</a></li>
+                    <li><a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/277" title="Tap to create an appointment" alt="CSCF Southeast Office">Southeast Orange County</a></li>
+                    <li><a target="_blank" class="button3" href="https://kiosk.na4.qless.com/kiosk/app/home/295 " title="Tap to create an appointment" alt="CSCF Southeast Office">Osceola County</a></li>
+                </ul> -->
+            </div>
+        </div>
+<!-- ------------------------------------------------------------ -->
+<!-- END VIEWS -->
         <div class="legal">
             <div class="legal-logos">
                 <img id="careersource-florida" src="https://www.careersourcecentralflorida.com/wp-content/uploads/CareerSource-Florida-logo.png">

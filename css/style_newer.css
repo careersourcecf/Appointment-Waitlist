@@ -83,18 +83,20 @@ body {
     padding: 0px;
 }
 .backBtn {
-    background: #f7f7f7;
-    color: #5a5a5a;
+    background: #5a5a5a;
+    color: #f7f7f7;
     padding: 20px;
     text-decoration: none;
     margin: 10px;
     border: 1px solid transparent;
     transition: all 0.5s ease;
+    align-self: flex-start;
 }
 .backBtn:hover {
     cursor: pointer;
-    background: white;
-    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    color: #5a5a5a;
+    border: 1px solid #5a5a5a;
 }
 /*  WELCOME MESSAGE */
 .welcome {
@@ -137,12 +139,12 @@ body {
 .view-list li {
     font-family: ProximaRegular;
     font-size: 1.5em;
-    color: #02a1dd;
+    color: #5a5a5a;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
 }
 .view-list ul {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
     max-width: 80%;
     margin: 0 auto;

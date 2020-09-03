@@ -80,7 +80,7 @@ body {
     width: 100%;
 }
 .nav-logo img {
-    padding: 0px;
+    padding: 10px;
 }
 .backBtn {
     background: #5a5a5a;
@@ -106,7 +106,7 @@ body {
     font-family:"ProximaBold", Helvetica, Arial, sans-serif;
 }
 .welcome-logo {
-    width:400px;
+    width:250px;
     display:block;
     max-width:100%;
 }

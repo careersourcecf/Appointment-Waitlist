@@ -33,7 +33,9 @@ body {
     padding:0px;
     margin:0px;
 }
-
+strong {
+    font-family: 'ProximaExtraBold', sans-serif!important;
+}
 /* CSCFL Banner */
 .go-home {
     margin:0px;

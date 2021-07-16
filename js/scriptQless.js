@@ -23,15 +23,15 @@ function viewControl(view){
     // Rename Main Title
     if(appState["currentView"] === "view-landing") {
 
-        appState['header'].textContent = 'Book an Appointment';
+        appState['header'].textContent = 'Make an Appointment';
 
     } else if(appState["currentView"] === 'view-virtual-appt'){
 
-        appState['header'].textContent = 'Book a Virtual Appointment';
+        appState['header'].textContent = 'Make a Virtual Appointment';
 
     } else if(appState["currentView"] === 'view-in-person-appt'){
 
-        appState['header'].textContent = 'Book an In-Person Appointment';
+        appState['header'].textContent = 'Make an In-Person Appointment';
 
     }
 };
